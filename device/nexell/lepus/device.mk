@@ -140,10 +140,10 @@ PRODUCT_COPY_FILES += \
 	hardware/samsung_slsi/slsiap/prebuilt/modules/nx_vpu.ko:system/lib/modules/nx_vpu.ko
 
 # ffmpeg libraries
-EN_FFMPEG_EXTRACTOR := true
-EN_FFMPEG_AUDIO_DEC := true
+EN_FFMPEG_EXTRACTOR := false
+EN_FFMPEG_AUDIO_DEC := false
 ifeq ($(EN_FFMPEG_EXTRACTOR),true)
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
 	hardware/samsung_slsi/slsiap/omx/codec/ffmpeg/libs/libavcodec-2.1.4.so:system/lib/libavcodec-2.1.4.so    \
 	hardware/samsung_slsi/slsiap/omx/codec/ffmpeg/libs/libavdevice-2.1.4.so:system/lib/libavdevice-2.1.4.so  \
 	hardware/samsung_slsi/slsiap/omx/codec/ffmpeg/libs/libavfilter-2.1.4.so:system/lib/libavfilter-2.1.4.so  \

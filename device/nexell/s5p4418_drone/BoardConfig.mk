@@ -56,8 +56,8 @@ BOARD_HAS_CAMERA := true
 BOARD_HAS_SENSOR := true
 BOARD_SENSOR_TYPE := general
 
-EN_FFMPEG_EXTRACTOR := true
-EN_FFMPEG_AUDIO_DEC := true
+EN_FFMPEG_EXTRACTOR := false
+EN_FFMPEG_AUDIO_DEC := false
 
 # Nexell Dual Audio
 EN_DUAL_AUDIO := false
