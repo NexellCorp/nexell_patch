@@ -1,5 +1,102 @@
 2015.11.18
+1. PowerOff (s5p6818 : UART busy check fix)
+	linux/platform/s5p6818/boot/release/2ndboot/2ndboot_drone.bin
+	linux/platform/s5p6818/boot/release/2ndboot/2ndboot_drone_sdmmc.bin
 
-1. Gallery2 (for bmp rendering problem : change thumbnail size factor)
+2. PowerOn (s5p6818 : UART irq map fix)
+	linux/kernel/kernel-3.4.39/drivers/tty/serial/nxp-s3c.c
+	linux/kernel/kernel-3.4.39/arch/arm/mach-s5p6818/include/mach/serial.h
+
+3. Gallery2 (for bmp rendering problem : change thumbnail size factor)
 	packages/apps/Gallery2/src/com/android/gallery3d/util/GalleryUtils.java
+
+4. vold (edit vold remove sequence to fix usb storage unmount error)
+	system/vold/DirectVolume.cpp
+
+5. GMAC (fix the link status check)
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/nxpmac_main.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/nxpmac.h
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/nxpmac_mdio.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/common.h
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/ring_mode.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/dwmac1000_core.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/nxpmac_platform.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/chain_mode.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/dwmac100_core.c
+	linux/kernel/kernel-3.4.39/drivers/net/ethernet/nexell/nxpmac/dwmac1000.h
+	linux/kernel/kernel-3.4.39/drivers/net/phy/phy.c
+	linux/kernel/kernel-3.4.39/drivers/net/phy/realtek.c
+	linux/kernel/kernel-3.4.39/drivers/net/phy/mdio_bus.c
+
+
+6. PAD Strength (changed sdmmc/lcd pad strength.)
+	linux/bootloader/u-boot-2014.07/board/s5p6818/drone/include/cfg_gpio.h
+	linux/bootloader/u-boot-2014.07/board/s5p4418/drone/include/cfg_gpio.h
+	linux/kernel/kernel-3.4.39/arch/arm/plat-s5p4418/drone/include/cfg_gpio.h
+	linux/kernel/kernel-3.4.39/arch/arm/plat-s5p6818/drone/include/cfg_gpio.h
+
+7. NxPlayerConsole (exit the thread when process terminated in force)
+	linux/platform/s5p6818/Solution/MediaPlayer/apps/NxPlayerConsole/main.cpp
+	linux/platform/s5p4418/Solution/MediaPlayer/apps/NxPlayerConsole/main.cpp
+
+8. Errata, governor (Errata diable in kernel config, governor ondemand->interactive)
+	linux/kernel/kernel-3.4.39/arch/arm/mach-s5p4418/Kconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_drone_android_lollipop_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_drone_android_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_asb_linux_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_android_lollipop_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_linux_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_svt_linux_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_lollipop_defconfig
+
+	
+9. FTL (proceed the migration after update block in no free block status)
+	linux/bootloader/u-boot-2014.07/arch/arm/cpu/slsiap/devices/mio/media/ftl/ftl.o.prebuilt
+	linux/bootloader/u-boot-2014.07/arch/arm/cpu/slsiap/devices/mio/media/ftl/ftl.x64.o.prebuilt
+	linux/kernel/kernel-3.4.39/drivers/block/nand_ftl/mio/media/ftl/ftl.o.prebuilt
+
+
+10. OTA update (add the OTA update function)
+./device/nexell/lepus/recovery.fstab
+./device/nexell/lepus/BoardConfig.mk
+./device/nexell/lepus/busybox
+./device/nexell/lepus/device.mk
+./device/nexell/lepus/recovery/Android.mk
+./device/nexell/lepus/recovery/recovery_updater.c
+./device/nexell/lepus/init.recovery.lepus.rc
+./device/nexell/lepus/releasetools.py
+./device/nexell/tools/build.sh
+./device/nexell/s5p4418_drone/recovery.fstab
+./device/nexell/s5p4418_drone/BoardConfig.mk
+./device/nexell/s5p4418_drone/busybox
+./device/nexell/s5p4418_drone/init.recovery.s5p4418_drone.rc
+./device/nexell/s5p4418_drone/device.mk
+./device/nexell/s5p4418_drone/recovery
+./device/nexell/s5p4418_drone/recovery/Android.mk
+./device/nexell/s5p4418_drone/recovery/recovery_updater.c
+./device/nexell/s5p4418_drone/releasetools.py
+./device/nexell/s5p6818_drone/recovery.fstab
+./device/nexell/s5p6818_drone/BoardConfig.mk
+./device/nexell/s5p6818_drone/busybox
+./device/nexell/s5p6818_drone/device.mk
+./device/nexell/s5p6818_drone/recovery
+./device/nexell/s5p6818_drone/recovery/Android.mk
+./device/nexell/s5p6818_drone/recovery/recovery_updater.c
+./device/nexell/s5p6818_drone/releasetools.py
+./device/nexell/s5p6818_drone/init.recovery.s5p6818_drone.rc
+./linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_android_lollipop_defconfig
+./linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_lollipop_defconfig
+./build/tools/releasetools/ota_from_target_files
+./build/tools/releasetools/common.py
+./build/core/Makefile
+./hardware/samsung_slsi/slsiap/ota/_Android.mk
+./hardware/samsung_slsi/slsiap/ota/spidev.h
+./hardware/samsung_slsi/slsiap/ota/spieeprom.h
+./hardware/samsung_slsi/slsiap/ota/Makefile
+./hardware/samsung_slsi/slsiap/ota/nxp4330_boot.h
+./hardware/samsung_slsi/slsiap/ota/spieeprom.c
+./hardware/samsung_slsi/slsiap/ota/update.c
+./hardware/samsung_slsi/slsiap/ota/build.sh
+./hardware/samsung_slsi/slsiap/ota/update.h
 	
