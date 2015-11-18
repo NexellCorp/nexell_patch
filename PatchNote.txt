@@ -1,0 +1,5 @@
+2015.11.18
+
+1. Gallery2 (for bmp rendering problem : change thumbnail size factor)
+	packages/apps/Gallery2/src/com/android/gallery3d/util/GalleryUtils.java
+	
