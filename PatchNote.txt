@@ -39,7 +39,7 @@
 	linux/platform/s5p6818/Solution/MediaPlayer/apps/NxPlayerConsole/main.cpp
 	linux/platform/s5p4418/Solution/MediaPlayer/apps/NxPlayerConsole/main.cpp
 
-8. Errata, governor (Errata diable in kernel config, governor ondemand->interactive)
+8. Errata, governor. L2 Cache(Errata diable in kernel config, governor ondemand->interactive)
 	linux/kernel/kernel-3.4.39/arch/arm/mach-s5p4418/Kconfig
 	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_drone_android_lollipop_defconfig
 	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p6818_drone_android_defconfig
@@ -58,45 +58,39 @@
 
 
 10. OTA update (add the OTA update function)
-./device/nexell/lepus/recovery.fstab
-./device/nexell/lepus/BoardConfig.mk
-./device/nexell/lepus/busybox
-./device/nexell/lepus/device.mk
-./device/nexell/lepus/recovery/Android.mk
-./device/nexell/lepus/recovery/recovery_updater.c
-./device/nexell/lepus/init.recovery.lepus.rc
-./device/nexell/lepus/releasetools.py
-./device/nexell/tools/build.sh
-./device/nexell/s5p4418_drone/recovery.fstab
-./device/nexell/s5p4418_drone/BoardConfig.mk
-./device/nexell/s5p4418_drone/busybox
-./device/nexell/s5p4418_drone/init.recovery.s5p4418_drone.rc
-./device/nexell/s5p4418_drone/device.mk
-./device/nexell/s5p4418_drone/recovery
-./device/nexell/s5p4418_drone/recovery/Android.mk
-./device/nexell/s5p4418_drone/recovery/recovery_updater.c
-./device/nexell/s5p4418_drone/releasetools.py
-./device/nexell/s5p6818_drone/recovery.fstab
-./device/nexell/s5p6818_drone/BoardConfig.mk
-./device/nexell/s5p6818_drone/busybox
-./device/nexell/s5p6818_drone/device.mk
-./device/nexell/s5p6818_drone/recovery
-./device/nexell/s5p6818_drone/recovery/Android.mk
-./device/nexell/s5p6818_drone/recovery/recovery_updater.c
-./device/nexell/s5p6818_drone/releasetools.py
-./device/nexell/s5p6818_drone/init.recovery.s5p6818_drone.rc
-./linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_android_lollipop_defconfig
-./linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_lollipop_defconfig
-./build/tools/releasetools/ota_from_target_files
-./build/tools/releasetools/common.py
-./build/core/Makefile
-./hardware/samsung_slsi/slsiap/ota/_Android.mk
-./hardware/samsung_slsi/slsiap/ota/spidev.h
-./hardware/samsung_slsi/slsiap/ota/spieeprom.h
-./hardware/samsung_slsi/slsiap/ota/Makefile
-./hardware/samsung_slsi/slsiap/ota/nxp4330_boot.h
-./hardware/samsung_slsi/slsiap/ota/spieeprom.c
-./hardware/samsung_slsi/slsiap/ota/update.c
-./hardware/samsung_slsi/slsiap/ota/build.sh
-./hardware/samsung_slsi/slsiap/ota/update.h
+	device/nexell/lepus/recovery.fstab
+	device/nexell/lepus/BoardConfig.mk
+	device/nexell/lepus/busybox
+	device/nexell/lepus/device.mk
+	device/nexell/lepus/init.recovery.lepus.rc
+	device/nexell/lepus/releasetools.py
+	device/nexell/tools/build.sh
+	device/nexell/s5p4418_drone/recovery.fstab
+	device/nexell/s5p4418_drone/BoardConfig.mk
+	device/nexell/s5p4418_drone/busybox
+	device/nexell/s5p4418_drone/init.recovery.s5p4418_drone.rc
+	device/nexell/s5p4418_drone/device.mk
+	device/nexell/s5p4418_drone/recovery
+	device/nexell/s5p4418_drone/releasetools.py
+	device/nexell/s5p6818_drone/recovery.fstab
+	device/nexell/s5p6818_drone/BoardConfig.mk
+	device/nexell/s5p6818_drone/busybox
+	device/nexell/s5p6818_drone/device.mk
+	device/nexell/s5p6818_drone/recovery
+	device/nexell/s5p6818_drone/releasetools.py
+	device/nexell/s5p6818_drone/init.recovery.s5p6818_drone.rc
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_android_lollipop_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_lollipop_defconfig
+	build/tools/releasetools/ota_from_target_files
+	build/tools/releasetools/common.py
+	build/core/Makefile
+	hardware/samsung_slsi/slsiap/ota/_Android.mk
+	hardware/samsung_slsi/slsiap/ota/spidev.h
+	hardware/samsung_slsi/slsiap/ota/spieeprom.h
+	hardware/samsung_slsi/slsiap/ota/Makefile
+	hardware/samsung_slsi/slsiap/ota/nxp4330_boot.h
+	hardware/samsung_slsi/slsiap/ota/spieeprom.c
+	hardware/samsung_slsi/slsiap/ota/update.c
+	hardware/samsung_slsi/slsiap/ota/build.sh
+	hardware/samsung_slsi/slsiap/ota/update.h
 	
