@@ -93,4 +93,8 @@
 	hardware/samsung_slsi/slsiap/ota/update.c
 	hardware/samsung_slsi/slsiap/ota/build.sh
 	hardware/samsung_slsi/slsiap/ota/update.h
-	
+
+11. S5P4418 config (ARM_NXP_CPUFREQ_BY_RESOURCE set to default yes)
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_android_lollipop_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_drone_linux_defconfig
+	linux/kernel/kernel-3.4.39/arch/arm/configs/s5p4418_lepus_android_lollipop_defconfig	
